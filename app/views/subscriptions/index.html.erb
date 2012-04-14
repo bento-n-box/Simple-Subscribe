@@ -1,0 +1,32 @@
+
+<div id="wrapper">
+	<div id="container">
+		
+	<h1>Fatbot</h1>
+
+<a href="http://fatbots.com"><%= image_tag "FATBOTS.png" %></a>
+
+	<table>
+	  <tr>
+	    <th>Email</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+	
+	<% @subscriptions.each do |subscription| %>
+	  <tr>
+	    <td><%= subscription.email %></td>
+	    <td><%= link_to 'Show', subscription %></td>
+	    <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
+	    <td><%= link_to 'Destroy', subscription, confirm: 'Are you sure?', method: :delete %></td>
+	  </tr>
+	  	<p>A 6' single sensor robot that pushes mobile notifications. Each FATBOT comes fully equipped with an illustrated comic book detailing his journey to Earth. 
+ <a href='http://twitter.com/upthemes'>KICKSTARTER</a>.</p>
+	<% end %>
+	</table>
+	</div>
+</div>
+<br />
+
+<%= link_to 'New Subscription', new_subscription_path %>

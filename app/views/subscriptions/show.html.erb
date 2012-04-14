@@ -1,0 +1,17 @@
+
+<div id="wrapper">
+	<div id="container">
+	
+		<p id="notice"> <%= notice %></p>
+		<%= image_tag "FATBOTS.png" , {:width => 330}%>
+		
+		<h2>Aww Snap! Get Ready for news on the hippest bot in the Universe.</h2>
+		<button class="bottomspace">See our Kickstarter page</button>
+		<p>
+		  <b>Email:</b>
+			<%= @subscription.email %>
+			<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
+			<%= link_to 'Back', subscriptions_path %>
+		</p>
+	</div>
+</div>
